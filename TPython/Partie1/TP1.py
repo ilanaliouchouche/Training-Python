@@ -394,6 +394,9 @@ if __name__ == "__main__":
     
     #hanoi(3)
 
+
+    #dé commenter le reste pur koch
+
     #hideturtle()
     #speed(100)
     #bgcolor("black")
