@@ -147,7 +147,7 @@ def spirale_fibo():
     gen = fibo_gen()
     for i in range(n):
         spi.pencolor(next(colori))
-        spi.circle(next(gen), 90)
+        spi.circle(2*next(gen), 90)
     done()
 
 
@@ -220,7 +220,7 @@ def echange(t, i, j):
 def melange(tab):
     taille = len(tab)
     for i in range(taille):
-        j = random.randint(0, taille - 1)
+        j = random.randint(0, i)
         echange(tab, i, j)
 
 
@@ -249,13 +249,10 @@ def sous_mot(a, b, tab):
     a_find = False
     for i in range(len(tab)):
         if tab[i] == a:      # on considere pos de b strict > pos de a
-            if tab[i] == b:
-                return False
             a_find = True
         else:  # a == b déjà fait
-            if tab[i] == b:
-                if a_find:
-                    return True
+            if tab[i] == b & a_find: 
+                return True
     return False
 
 
